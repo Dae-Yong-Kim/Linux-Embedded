@@ -3,10 +3,9 @@
 add_gitkeep()
 {
 	local dirs=`ls -A $1`
-	echo "$dirs"
 
-	if [ -z $dirs ]; then
-		#echo "1111111111111111"
+	#if [ -z "$dirs" ]; then
+	if [ "$dirs" = "" ]; then
 		touch $1/.gitkeep
 	else
 		for dir in $dirs
